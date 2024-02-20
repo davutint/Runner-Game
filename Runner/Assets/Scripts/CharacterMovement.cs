@@ -30,11 +30,8 @@ public class CharacterMovement : MonoBehaviour
 	[SerializeField]
 	private Character character;
 	
-	
-	
 	bool isGround;
 	
-	private float OmuzAnimWait=4f;
 	private void Awake()
 	{
 		capsuleCollider=GetComponent<CapsuleCollider>();
@@ -195,14 +192,14 @@ public class CharacterMovement : MonoBehaviour
 	private void OnCollisionStay(Collision other)
 	{
 		
-		Debug.Log("yerde");
+		
 		isGround=true;
 		IsGround();
 		
 	}
 	private void OnCollisionExit(Collision other)
 	{
-		Debug.Log(message: "havada");
+		
 		isGround=false;
 		IsGround();
 	}
